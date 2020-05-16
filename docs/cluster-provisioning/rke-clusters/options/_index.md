@@ -1,6 +1,6 @@
 ---
 title: 集群参数
-description: 当您在 Rancher 中使用 RKE 启动的集群时，您可以选择自定义 Kubernetes 选项。您可以通过Rancher UI或集群配置文件配置 Kubernetes 选项。
+description: 当您在 Rancher 中使用 RKE 启动集群时，您可以选择自定义 Kubernetes 选项。您可以通过Rancher UI或集群配置文件配置 Kubernetes 选项。
 keywords:
   - rancher 2.0中文文档
   - rancher 2.x 中文文档
@@ -23,7 +23,7 @@ keywords:
 - [Rancher UI](#rancher-ui)：通过 Rancher UI 设置 Kubernetes 集群的通用自定义的选项。
 - [集群配置文件](#集群配置文件)：高级用户可以创建 RKE 配置文件，而不是使用 Rancher UI 为集群设置 Kubernetes 选项。通过使用配置文件，您可以在 YAML 中指定 RKE 安装中可用的任何选项，但 `system_images`参数除外。
 
-在 Rancher v2.0.0 至 v2.2.x，Rancher 用于配置集群的配置文件与 [Rancher Kubernetes Engine 的集群配置文件](http://docs.rancher.com/docs/rke/latest/en/config-options/)相同。在 Rancher v2.3.0 中，RKE 信息仍然包含在配置文件中，但它与其他选项的层级是分开的，因此 RKE 集群配置应在`rancher_kubernetes_engine_config`参数下。有关详细信息，请参阅关于[集群配置文件](#集群配置文件)。
+在 Rancher v2.0.0 至 v2.2.x，Rancher 用于配置集群的配置文件与 [Rancher Kubernetes Engine 的集群配置文件](http://docs.rancher.com/docs/rke/latest/en/config-options/)相同。在 Rancher v2.3.0 中，RKE 信息仍然包含在配置文件中，但它与其他选项的层级是分开的，因此 RKE 集群配置应在`rancher_kubernetes_engine_config`参数下。有关详细信息，请参阅[集群配置文件](#集群配置文件)。
 
 ## Rancher UI
 
@@ -90,7 +90,7 @@ _v2.2.0 可用_
 - **系统镜像** 是维护 Kubernetes 集群所需的组件。
 - **插件镜像** 用于部署多个集群组件包括网络插件、ingress 控制器、DNS 插件或 `metrics-server`。
 
-请参阅 [RKE 有关私有镜像仓库文档](http://docs.rancher.com/docs/rke/latest/en/config-options/private-registries/)了解私有镜像仓库在集群配置过程中组件的更多信息。
+请参阅 [RKE 文档中私有镜像部分](http://docs.rancher.com/docs/rke/latest/en/config-options/private-registries/)了解在配置集群组件过程中私有镜像仓库的更多信息。
 
 ### 授权集群访问地址
 
